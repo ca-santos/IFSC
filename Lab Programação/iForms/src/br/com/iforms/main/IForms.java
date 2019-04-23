@@ -30,43 +30,44 @@ public class IForms {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {                
-                
-                //INICIA O LOOK AND FELL
+            public void run() {
+
                 try {
-                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (InstantiationException ex) {
-                    Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IllegalAccessException ex) {
-                    Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (UnsupportedLookAndFeelException ex) {
+
+                    //INICIA O LOOK AND FELL
+                    try {
+                        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (InstantiationException ex) {
+                        Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IllegalAccessException ex) {
+                        Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (UnsupportedLookAndFeelException ex) {
+                        Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                    //INICIA O ESQUELETO DA TELA
+                    Main main = new Main();
+                    main.setVisible(true);
+                    main.setExtendedState(main.getExtendedState() | main.MAXIMIZED_BOTH);
+
+                    //INICIA O PAINEL PRINCIPAL
+                    JDesktopPane mainPane = main.getDesktopPane();
+
+                    //CARREGA A TELA INICIAL                                        
+                    FrameManager.addInternalFrame(mainPane, Teste.class.getCanonicalName());
+
+                } catch (Exception ex) {
                     Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
                 }
-
-                //INICIA O ESQUELETO DA TELA
-                Main main = new Main();
-                main.setVisible(true);
-                main.setExtendedState(main.getExtendedState() | main.MAXIMIZED_BOTH);
-
-                //INICIA O PAINEL PRINCIPAL
-                JDesktopPane mainPane = main.getDesktopPane();                
-                
-                //CARREGA A TELA INICIAL
-                JInternalFrame dashboard = new Teste();
-                dashboard.pack();
-                
-                FrameManager.addInternalFrame(mainPane, dashboard);
 
             }
         });
 
     }
-
-    
 
 }
