@@ -193,6 +193,7 @@
                                   </Group>
                                   <EmptySpace min="0" pref="176" max="32767" attributes="0"/>
                               </Group>
+                              <Component id="jTextField7" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -213,7 +214,9 @@
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jTextField6" min="-2" pref="32" max="-2" attributes="0"/>
-                          <EmptySpace pref="159" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jTextField7" min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace pref="109" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -242,6 +245,8 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="jLabel1"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField7">
                 </Component>
               </SubComponents>
             </Container>

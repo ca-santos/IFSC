@@ -66,6 +66,7 @@ public class CreateAndUpdate extends javax.swing.JInternalFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
@@ -148,7 +149,8 @@ public class CreateAndUpdate extends javax.swing.JInternalFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))
-                        .addGap(0, 176, Short.MAX_VALUE)))
+                        .addGap(0, 176, Short.MAX_VALUE))
+                    .addComponent(jTextField7))
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -166,7 +168,9 @@ public class CreateAndUpdate extends javax.swing.JInternalFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelBackLayout = new javax.swing.GroupLayout(panelBack);
@@ -252,6 +256,7 @@ public class CreateAndUpdate extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JPanel panelBack;
     // End of variables declaration//GEN-END:variables
 }
