@@ -8,7 +8,7 @@ package br.com.iforms.main;
 import br.com.iforms.views.Dashboard;
 import br.com.iforms.views.FrameManager;
 import br.com.iforms.views.Main;
-import br.com.iforms.views.CreateAndUpdate;
+import br.com.iforms.views.CreateAndUpdate_old;
 import br.com.iforms.views.ain;
 import java.awt.Dimension;
 import static java.awt.Frame.MAXIMIZED_BOTH;
@@ -59,7 +59,7 @@ public class IForms {
                     JDesktopPane mainPane = main.getDesktopPane();
 
                     //CARREGA A TELA INICIAL                                        
-                    FrameManager.addInternalFrame(mainPane, CreateAndUpdate.class.getCanonicalName());
+                    FrameManager.addInternalFrame(mainPane, CreateAndUpdate_old.class.getCanonicalName());
 
                 } catch (Exception ex) {
                     Logger.getLogger(IForms.class.getName()).log(Level.SEVERE, null, ex);
